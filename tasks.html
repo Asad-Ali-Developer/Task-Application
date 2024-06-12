@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Tasks</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav>
+
+        <div class="partOne">iCode</div>
+  
+        <div class="partTwo">
+          <a href="index.html">Home</a>
+          <a href="tasks.html">Tasks</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+    
+    </nav>
+    
+    <main>
+        <div id="task-form">
+            <h1 class="tastHeading">Add Task</h1>
+            <input type="text" id="task-title" placeholder="Task Title">
+
+            <textarea id="task-desc" placeholder="Description"></textarea>
+
+            <button id="taskSubmitBtn" onclick="addTask()">Add Task</button>
+        </div>
+        <div id="tasks-container" lang="en">
+            <!-- Tasks will be loaded here -->
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
