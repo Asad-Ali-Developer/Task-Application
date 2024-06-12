@@ -12,30 +12,183 @@ body {
 }
 
 nav {
-  background-color: #333;
+  background-color: #111115;
   color: white;
   padding: 1em;
   text-align: center;
   display: flex;
   justify-content: space-between;
-  padding: 20px 150px;
+  padding: 20px 190px;
   cursor: pointer;
+  font-size: 17px;
+}
+
+.partOne{
+  color: rgb(4, 159, 206);
+  font-size: 20px;
 }
 
 .partTwo {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
+  transition: 0.3s ;
+}
+
+nav a:hover{
+  color: rgb(4, 159, 206);
 }
 
 main {
   padding: 20px;
 }
+
+footer{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: #101012;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* For Home Page */
+
+.text-banner{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin-inline: auto;
+  gap: 50px;
+  align-items: center;
+  margin-top: 12vh;
+  flex-wrap: wrap;
+}
+
+.texts{
+  width: 600px;
+}
+
+.texts > h1{
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.texts > p{
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.banner{
+  overflow: hidden;
+  /* border-radius: 30px; */
+  object-fit: contain;
+  object-position: right;
+}
+
+.banner > img{
+  width: 400px;
+  height: 300px;
+}
+
+.taskManager{
+  color: rgb(30, 179, 224);
+  font-size: 3vw;
+}
+
+.taskPageBtn{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 255);
+  width: 140px;
+  height: 45px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.taskPageBtn:hover{
+  border-color: rgb(88, 201, 236);
+  color: rgb(88, 201, 236);
+  /* color: rgb(225, 242, 247); */
+  width: 150px;
+}
+
+.taskPageBtn i{
+  transition: 0.3s;
+}
+
+.contactLinks{
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 25vh;
+  background-color: #212123;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.contactLinksForAbout{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5vh;
+  background-color: #212123;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.contactLinks > a{
+  color: rgb(154, 152, 152);
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+.contactLinksForAbout > a{
+  color: rgb(154, 152, 152);
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 25px;
+}
+
+.contactLinks > a:hover{
+  color: rgb(206, 206, 206);
+}
+
+.contactLinksForAbout > a:hover{
+  color: rgb(206, 206, 206);
+}
+
+.taskPageBtn:hover i{
+  transform: translateX(10px);
+}
+
+.contactLinksForAbout:hover i{
+  transform: translateX(10px);
+}
+
+
+
+/* Styling for Task Page */
 
 #task-form,
 #contact-form {
@@ -63,6 +216,10 @@ textarea {
   /* height: 90px; */
 }
 
+.titleForContact{
+  margin-top: 50px;
+}
+
 #task-form {
   width: 80%;
   margin-inline: auto;
@@ -83,16 +240,17 @@ textarea {
 }
 
 #taskSubmitBtn {
-  background-color: rgb(32, 99, 255);
-  width: 150px;
+  background-color: rgb(237, 237, 237);
+  width: 120px;
   margin-top: 10px;
   padding: 10px 0;
   font-size: 16px;
-  color: white;
+  color: #2c2c2c;
   font-weight: 500;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  font-weight: 500;
 }
 
 #tasks-container {
@@ -156,6 +314,7 @@ textarea {
   font-weight: 600;
   margin-top: 10px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 fieldset {
@@ -181,6 +340,27 @@ legend {
 .task.completed {
   background-color: hsl(128, 97%, 13%);
 }
+
+
+/* Styling for about page */
+
+.text-links{
+  margin-top: 15vh;
+  max-width: 600px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.text-links p{
+  margin-top: 3vh;
+  text-align: justify;
+}
+
+
 
 @media (max-width: 1275px) {
   /* Adjust layout for large devices */
