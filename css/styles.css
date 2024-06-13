@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  background-color: #18181b;
+  color: white;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 150px;
+  cursor: pointer;
+}
+
+.partTwo {
+  display: flex;
+  gap: 50px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+#task-form,
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tastHeading {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(0, 76, 255);
+}
+
+input,
+textarea {
+  padding: 15px;
+  font-size: 1em;
+  outline: none;
+  background-color: #26262a;
+  border: 2px solid #2d2d30;
+  border-radius: 8px;
+  color: white;
+  /* height: 90px; */
+}
+
+#task-form {
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 30px;
+  font-family: sans-serif;
+
+  border: 1px solid rgb(120, 119, 119);
+  padding: 25px 10px 15px 10px;
+  border-radius: 10px;
+}
+
+
+textarea {
+  height: 130px;
+  resize: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+#taskSubmitBtn {
+  background-color: rgb(32, 99, 255);
+  width: 150px;
+  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#tasks-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-inline: auto;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+#taskMade {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 2px solid #2d2d30;
+  border-radius: 8px;
+  color: white;
+  width: 310px;
+  font-family: sans-serif;
+}
+
+.taskTitle{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px;
+
+}
+
+.taskStatus{
+  font-size: 15px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#deleteTask{
+  color: rgb(2, 117, 248);
+  background-color: transparent;
+  border: none;
+  margin-left: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.taskStatusHead{
+  color: rgb(2, 117, 248);
+  font-weight: 600;
+}
+
+/* Styling for Contact Form */
+#contact-form {
+  padding: 15px 10px;
+}
+
+#messageSubmitBtn {
+  padding: 15px 10px;
+  width: 150px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+fieldset {
+  width: 80%;
+  margin-inline: auto;
+  padding: 5px 25px;
+  border: 1px solid rgb(145, 140, 140);
+  border-radius: 10px;
+  color: white;
+  margin-top: 10vh;
+}
+
+legend {
+  margin-left: 3vw;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+#name{
+    margin-bottom: 0;
+}
+
+.task.completed {
+  background-color: hsl(128, 97%, 13%);
+}
+
+@media (max-width: 1275px) {
+  /* Adjust layout for large devices */
+  .task{
+    width: 400px;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* Adjust layout for large devices */
+  .task{
+    width: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Adjust layout for large devices */
+  #task-form {
+      width: 100%;   
+  }
+  .task{
+    width: 100%;
+  }
+}
+
+@media (max-width: 644px){
+  #task-form {
+    width: 100%;
+  }
+  fieldset{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  #task-form {
+    width: 100%;
+    /* margin-inline: auto; */
+  }
+  fieldset{
+    width: 100%;
+  }
+}
+@media (max-width: 500px){
+  #task-form {
+    width: 100%;
+  }
+  fieldset{
+    width: 100%;
+
+  }
+}
+@media (max-width: 450px){
+  #task-form {
+    width: 100%;
+  }
+  fieldset{
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px){
+  #task-form {
+    width: 100%;
+
+  }
+  fieldset{
+    width: 100%;
+  }
+}
+
+@media (max-width: 414px){
+  #task-form {
+    width: 100%;
+  }
+  fieldset{
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px){
+  #task-form {
+    width: 100%;
+  }
+  fieldset{
+    width: 100%;
+  }
+}
