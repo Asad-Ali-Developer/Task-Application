@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  background-color: #18181b;
+  color: white;
+}
+
+nav {
+  background-color: #111115;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  font-size: 17px;
+}
+
+.partOne {
+  color: rgb(4, 159, 206);
+  font-size: 20px;
+}
+
+.partTwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: rgb(4, 159, 206);
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  margin-top: 180px;
+  text-align: center;
+  background-color: #101012;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* Styling for Task Page */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  font-size: 1em;
+  outline: none;
+  background-color: #26262a;
+  border: 2px solid #2d2d30;
+  border-radius: 8px;
+  color: white;
+  /* height: 90px; */
+}
+
+.titleForContact {
+  margin-top: 50px;
+}
+
+textarea {
+  height: 130px;
+  resize: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+/* Styling for Contact Form */
+#contact-form {
+  padding: 15px 10px;
+}
+
+#messageSubmitBtn {
+  padding: 15px 10px;
+  width: 150px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+fieldset {
+  width: 80%;
+  margin-inline: auto;
+  padding: 5px 25px;
+  border: 1px solid rgb(145, 140, 140);
+  border-radius: 10px;
+  color: white;
+  margin-top: 10vh;
+}
+
+legend {
+  margin-left: 3vw;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+#name {
+  margin-bottom: 0;
+}
+
+.burger {
+  font-size: 23px;
+  transition: 0.3s;
+  display: none;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1090px) {
+  /* Adjust layout for large devices */
+
+  .partTwo{
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    z-index: 3;
+  }
+
+  .partTwo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    margin-top: 270px;
+    width: 100%;
+    background-color: rgb(20, 132, 166);
+    padding: 20px 0;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  nav{
+    padding: 20px 40px;
+  }
+}

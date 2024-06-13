@@ -41,41 +41,67 @@
 =======
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager - Tasks</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/tasks.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav>
+      <div class="partOne">iCode</div>
 
-        <div class="partOne">iCode</div>
-  
-        <div class="partTwo">
+      <div class="partTwo">
+        
+        <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="tasks.html">Tasks</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
-    
+
+        <div class="searchBar">
+          <input type="search" id="searchBarIn" placeholder="Search task" />
+          <img id="searchBtn" src="/images/search.svg" alt="search" />
+        </div>
+
+      </div>
+
+      <div class="searchResults">
+        <h2>Title:</h2>
+        <p>Description:</p>
+        <span id="searchStatus">Status: </span><span>Pending</span>
+      </div>
+
+      <div class="burger"><i class="bx bx-menu"></i></div>
     </nav>
-    
+
     <main>
-        <div id="task-form">
-            <h1 class="tastHeading">Add Task</h1>
-            <input type="text" id="task-title" placeholder="Task Title">
+      <div id="task-form">
+        <h1 class="taskHeading">Add Task</h1>
+        <input type="text" id="task-title" placeholder="Task Title" />
 
-            <textarea id="task-desc" placeholder="Description"></textarea>
+        <textarea id="task-desc" placeholder="Description"></textarea>
 
-            <button id="taskSubmitBtn" onclick="addTask()">Add Task</button>
-        </div>
-        <div id="tasks-container" lang="en">
-            <!-- Tasks will be loaded here -->
-        </div>
+        <button id="taskSubmitBtn" onclick="addTask()">Add Task</button>
+
+        <button
+          id="taskUpdateBtn"
+          onclick="confirmUpdateTask()"
+          style="display: none"
+        >
+          Update Task
+        </button>
+      </div>
+      <div id="tasks-container" lang="en">
+        <!-- Tasks will be loaded here -->
+      </div>
     </main>
-    <script src="scripts.js"></script>
-</body>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
 >>>>>>> 23b40c3 (Second Commit)
