@@ -141,21 +141,21 @@ footer {
   .burger {
     display: block;
   }
-  .partTwo {
-    display: none;
-  }
   
   .partTwo {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    transform: translateX(100%);
+    right: 0;
     margin-top: 270px;
-    width: 100%;
+    width: 50%;
     background-color: rgb(20, 132, 166);
     padding: 20px 0;
     line-height: 1.2;
     font-weight: 500;
+    transition: 0.3s;
+    border-radius: 10px;
   }
 
   nav{
