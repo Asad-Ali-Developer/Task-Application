@@ -14,7 +14,7 @@ burgerBtn.addEventListener('click', () => {
       partTwo.style.transform = "translateX(0)"
       flag = 1
     } else {
-      partTwo.style.transform = "translateX(100%)"
+      partTwo.style.transform = "translateX(150%)"
       flag = 0
     }
 })

@@ -183,6 +183,13 @@ searchBar.addEventListener('blur', () => {
 let burgerBtn = document.querySelector('.burger')
 let nav = document.querySelector('nav');
 
+
 burgerBtn.addEventListener('click', () => {
-  nav.style.display = "block"
+    if (flag == 0) {
+      nav.style.display = "block"
+      flag = 1
+    } else {
+      nav.style.display = "none"
+      flag = 0
+    }
 })
