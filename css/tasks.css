@@ -35,6 +35,7 @@ nav {
   align-items: center;
   gap: 30px;
   overflow-x: hidden;
+  transition: 0.3s;
 }
 
 nav a {
@@ -309,7 +310,7 @@ button:last-child {
   }
 
   .partTwo {
-    /* display: none; */
+    display: none;
     /* display: block; */
     transform: translateX(100%);
     position: absolute;
@@ -321,7 +322,7 @@ button:last-child {
     background-color: rgb(40, 101, 119);
     margin-top: 350px;
     padding: 10px 0;
-    transition: 0.3s;
+    transition: 0.4s;
     border-radius: 5px;
     z-index: 2;
   }
@@ -395,7 +396,7 @@ button:last-child {
     background-color: rgb(40, 101, 119);
     margin-top: 330px;
     padding: 10px 0;
-    transition: 0.3s;
+    transition: 0.4s;
     border-radius: 5px;
     z-index: 2;
   }
@@ -439,6 +440,8 @@ button:last-child {
   #taskSubmitBtn {
     padding: 10px 0;
   }
+
+
 }
 
 /* MEDIA QUERIES */
