@@ -4,12 +4,10 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   font-family: sans-serif;
   background-color: #18181b;
   color: white;
-  overflow-x: hidden;
 }
 
 nav {
@@ -35,7 +33,7 @@ nav {
   align-items: center;
   flex-direction: row;
   gap: 30px;
-  overflow: hidden;
+  transition: 0.8s;
 }
 
 nav a {
@@ -67,18 +65,16 @@ footer {
 .text-banner {
   display: flex;
   justify-content: space-between;
-  max-width: 1180px;
+  max-width: 80%; /* Adjusted */
   margin-inline: auto;
   gap: 50px;
-  overflow: hidden;
+  overflow-x: hidden;
   align-items: center;
   margin-top: 12vh;
-  /* flex-wrap: wrap; */
-  z-index: 4;
 }
 
 .texts {
-  width: 600px;
+  width: 50%; /* Adjusted */
 }
 
 .texts > h1 {
@@ -98,7 +94,6 @@ footer {
   font-size: 16px;
   line-height: 1.5;
   text-align: justify;
-  /* text-indent: 10px; */
 }
 
 .banner {
@@ -179,13 +174,7 @@ code {
   border-radius: 10px;
 }
 
-.contactLinks > a {
-  color: rgb(154, 152, 152);
-  text-decoration: none;
-  transition: 0.3s;
-  font-size: 25px;
-}
-
+.contactLinks > a,
 .contactLinksForAbout > a {
   color: rgb(154, 152, 152);
   text-decoration: none;
@@ -193,10 +182,7 @@ code {
   font-size: 25px;
 }
 
-.contactLinks > a:hover {
-  color: rgb(206, 206, 206);
-}
-
+.contactLinks > a:hover,
 .contactLinksForAbout > a:hover {
   color: rgb(206, 206, 206);
 }
@@ -226,35 +212,28 @@ code {
 /* MEDIA QUERIES */
 
 @media (max-width: 1090px) {
-  /* Adjust layout for large devices */
   .burgerBtn {
     display: block;
   }
 
   .partTwo {
+    overflow-x: hidden;
     display: none;
-    overflow: hidden;
-  }
-
-  .partTwo {
-    display: flex;
     flex-direction: column;
-    position: absolute;
-    transform: translateX(150%);
-    right: 0;
-    margin-top: 270px;
-    width: 50%;
-    background-color: rgb(20, 132, 166);
-    padding: 20px 0;
     line-height: 1.2;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    background-color: rgb(4, 159, 206);
+    padding: 20px 0;
+    border-radius: 5px;
     font-weight: 500;
-    transition: 0.3s;
-    border-radius: 10px;
+    transition: 0.8s;
   }
 
   nav {
     padding: 30px 80px;
-    /* overflow: hidden !important; */
   }
 
   .burgerBtn {
@@ -262,23 +241,13 @@ code {
   }
 
   .text-banner {
-    /* width: 80%; */
     margin-inline: auto;
     flex-wrap: nowrap;
     flex-direction: column;
-    transition: 0.3s;
     gap: 100px;
   }
 
-  .banner {
-    transform: scale(1);
-    /* width: 50%; */
-    /* height: 50%; */
-    /* height: 100; */
-  }
-
   .texts {
-    flex-wrap: wrap;
     width: 90%;
     margin-top: 0;
   }
@@ -286,8 +255,9 @@ code {
   .texts > h1 {
     font-size: 26px;
   }
-  .texts > h1 {
-    font-size: 54px;
+
+  .banner {
+    transform: scale(1);
   }
 
   .contactLinks {
@@ -297,56 +267,50 @@ code {
 }
 
 @media (max-width: 768px) {
-  .burger {
+  .burgerBtn {
     display: block;
+  }
+
+  .text-banner{
+    margin: 15% 0;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   .partTwo {
     display: none;
-  }
-
-  .partTwo {
-    display: flex;
     flex-direction: column;
-    position: absolute;
-    transform: translateX(150%);
-    right: 0;
-    margin-top: 270px;
-    width: 100%;
-    background-color: rgb(20, 132, 166);
-    padding: 20px 0;
     line-height: 1.2;
-    font-weight: 500;
-    transition: 0.3s;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: rgb(4, 159, 206);
+    padding: 20px 0;
     border-radius: 5px;
+    font-weight: 500;
+    transition: 0.8s;
   }
 
   nav {
     padding: 20px 40px;
   }
 
-  .burger {
+  .burgerBtn {
     z-index: 3;
   }
 
   .text-banner {
-    /* width: 80%; */
     margin-inline: auto;
     flex-wrap: nowrap;
     flex-direction: column;
-    transition: 0.3s;
     gap: 40px;
-  }
-
-  .banner {
-    transform: scale(0.7);
-    /* width: 50%; */
-    /* height: 50%; */
-    /* height: 100; */
+    max-width: 100%;
   }
 
   .texts {
-    flex-wrap: wrap;
     width: 90%;
     margin-top: 0;
   }
@@ -354,6 +318,7 @@ code {
   .texts > h4 {
     font-size: 18px;
   }
+
   .texts > h1 {
     font-size: 34px;
   }
@@ -361,5 +326,8 @@ code {
   .contactLinks {
     margin-top: 20px;
     margin-bottom: 90px;
+  }
+  footer{
+    margin: 0;
   }
 }
