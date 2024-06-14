@@ -1,6 +1,6 @@
 
 
-let burgerBtn = document.querySelector('.burger')
+let burgerBtn = document.querySelector('.burgerBtn')
 let partTwo = document.querySelector('.partTwo');
 
 

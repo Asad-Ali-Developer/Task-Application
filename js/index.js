@@ -1,8 +1,8 @@
 
 
-let burgerBtn = document.querySelector('.burger')
+let burgerBtn = document.querySelector('.burgerBtn')
 
-let partOne = document.querySelector('.partOne');
+// let partOne = document.querySelector('.partOne');
 let partTwo = document.querySelector('.partTwo');
 
 
@@ -14,7 +14,7 @@ burgerBtn.addEventListener('click', () => {
       partTwo.style.transform = "translateX(0)"
       flag = 1
     } else {
-      partTwo.style.transform = "translateX(150%)"
+      partTwo.style.transform = "translateX(100%)"
       flag = 0
     }
 })

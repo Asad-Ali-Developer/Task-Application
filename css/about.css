@@ -9,6 +9,7 @@ body {
   font-family: sans-serif;
   background-color: #18181b;
   color: white;
+  overflow-x: hidden;
 }
 
 nav {
@@ -23,9 +24,10 @@ nav {
   font-size: 17px;
 }
 
-.partOne {
+.partOne > a {
   color: rgb(4, 159, 206);
   font-size: 20px;
+  font-weight: 600;
 }
 
 .partTwo {
@@ -59,7 +61,7 @@ footer {
   font-size: 14px;
 }
 
-.burger {
+.burgerBtn {
   font-size: 23px;
   transition: 0.3s;
   display: none;
@@ -138,7 +140,7 @@ footer {
 @media (max-width: 1090px) {
   /* Adjust layout for large devices */
 
-  .burger {
+  .burgerBtn {
     display: block;
   }
   
@@ -149,16 +151,64 @@ footer {
     transform: translateX(100%);
     right: 0;
     margin-top: 270px;
-    width: 50%;
+    width:50%;
     background-color: rgb(20, 132, 166);
     padding: 20px 0;
     line-height: 1.2;
     font-weight: 500;
     transition: 0.3s;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   nav{
-    padding: 20px 40px;
+    padding: 20px 70px;
+  }
+
+  footer{
+    margin-top: 68%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout for large devices */
+
+  .burgerBtn {
+    display: block;
+  }
+
+  .text-links > h1{
+    font-size: 27px;
+  }
+
+  .text-links > p{
+    font-size: 15px;
+  }
+  
+  .partTwo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(100%);
+    right: 0;
+    margin-top: 270px;
+    width: 100%;
+    background-color: rgb(20, 132, 166);
+    padding: 20px 0;
+    line-height: 1.2;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  nav{
+    padding: 20px 70px;
+  }
+
+  .text-links{
+    margin-top: 5vh;
+  }
+
+  footer{
+    margin-top: 90%;
   }
 }

@@ -9,6 +9,7 @@ body {
   font-family: sans-serif;
   background-color: #18181b;
   color: white;
+  overflow-x: hidden;
 }
 
 nav {
@@ -26,6 +27,7 @@ nav {
 .partOne {
   color: rgb(4, 159, 206);
   font-size: 20px;
+  font-weight: 600;
 }
 
 .partTwo {
@@ -126,7 +128,7 @@ legend {
   margin-bottom: 0;
 }
 
-.burger {
+.burgerBtn {
   font-size: 23px;
   transition: 0.3s;
   display: none;
@@ -135,18 +137,27 @@ legend {
 
 
 
-
-
-/* MEDIA QUERIES */
-
 @media (max-width: 1090px) {
-  /* Adjust layout for large devices */
-
+  
   .partTwo{
     display: none;
   }
 
-  .burger {
+  #contact-form{
+    max-width: 100%;
+    padding: 10px 0;
+    
+  }
+
+  .titleForContact {
+    margin-top: 20px;
+  }
+  
+  fieldset{
+    width: 90%;
+  }
+
+  .burgerBtn {
     display: block;
     z-index: 3;
   }
@@ -155,16 +166,78 @@ legend {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    margin-top: 270px;
+    width: 30%;
+    background-color: rgb(20, 132, 166);
+    padding: 20px 0;
+    line-height: 1.2;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  nav{
+    padding: 20px 70px;
+  }
+
+  footer{
+    margin-top: 60%;
+  }
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  /* Adjust layout for large devices */
+
+  .partTwo{
+    display: none;
+  }
+
+  #contact-form{
+    max-width: 100%;
+    padding: 10px 0;
+    
+  }
+
+  .titleForContact {
+    margin-top: 20px;
+  }
+  
+  fieldset{
+    width: 100%;
+  }
+
+  .burgerBtn {
+    display: block;
+    z-index: 3;
+  }
+
+  .partTwo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
     margin-top: 270px;
     width: 100%;
     background-color: rgb(20, 132, 166);
     padding: 20px 0;
     line-height: 1.2;
     font-weight: 500;
+    transition: 0.3s;
+    border-radius: 5px;
   }
 
   nav{
     padding: 20px 40px;
+  }
+
+  footer{
+    margin-top: 67%;
   }
 }
