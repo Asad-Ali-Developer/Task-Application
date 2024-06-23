@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Here, we are fetching data from API
 function fetchTasks() {
     fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
         .then(response => response.json())
@@ -30,6 +31,8 @@ function fetchTasks() {
         });
 }
 
+
+// Here, we are adding up tasks manually
 function addTask() {
     const title = document.getElementById('task-title').value;
     const description = document.getElementById('task-desc').value;
@@ -86,6 +89,8 @@ function deleteTask(taskId) {
     });
 }
 
+
+// Here, this is used to edit the tasks
 function editTask(taskId, title, description) {
     document.getElementById('task-title').value = title;
     document.getElementById('task-desc').value = description;
@@ -94,6 +99,8 @@ function editTask(taskId, title, description) {
     document.getElementById('taskUpdateBtn').setAttribute('data-id', taskId);
 }
 
+
+// This is used to confirm Updated Tasks
 function confirmUpdateTask() {
     const taskId = document.getElementById('taskUpdateBtn').getAttribute('data-id');
     const title = document.getElementById('task-title').value;
